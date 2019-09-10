@@ -1,0 +1,15 @@
+  When multiple minions are attacking the same enemy minion in one solution,the higher attack points the minion has,the earlier he will attack.
+The program make up number of minions (when use tragedy 1:you need both users' and enemies' minions' health be a equal difference series,else you only need enemies' health in the range of the equal difference series you make up) from 0/1 to larger by use your minions to attack
+  Make up number from 0 is much more complex,because when a series of attack kill a minion,it make up 0. And usually there are too many combinations to kill a minion.
+So usually you can make up from 1,unless there is no solution.
+
+  A minion has taunt means:when the minion is alive,the other side can't attack other minions,unless it also has taunt.
+  A minion has windfury means:he can attack twice.
+  
+  I don't intent to deal Divine_Shield because the way to deal minions with Divine Shield is almost totally DFS.It would cost much more time than other minions and the way to solve it has no technical content.
+For example,
+at this case
+user: 3 5  windfury,Divine_Shield
+enemy 10 7 taunt
+it can be solved.
+But this way to slove it is either too specific or too random.

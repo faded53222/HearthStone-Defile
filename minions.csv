@@ -1,0 +1,12 @@
+Name,attack,health,belong,ability
+Silverback Patriarch,1,4,user,taunt
+Dr.Boom,7,7,user,
+Lord of the Arena,6,5,user,taunt
+Windfury Harpy,4,5,user,windfury
+Brightwing,3,2,user,
+High Inquisitor Whitemane,6,8,user,
+Howlfiend,3,6,enemy,
+Goblin Bomb,0,2,enemy,
+Bazaar Mugger,3,5,enemy,
+Doomsayer,0,7,enemy,
+Target Dummy,0,2,enemy,taunt
