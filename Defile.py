@@ -2,6 +2,7 @@ import csv
 import pandas as pd
 import itertools as it
 import copy
+import pickle
 class tuple_with_sum:
 	def __init__(self,tuple1):
 		self.tuple1=tuple1
@@ -72,13 +73,13 @@ def get_sum_of_attack():
 user_minion_status_keep=[]
 enemy_minion_status_keep=[]
 def save_status():
-	user_minion_status_keep.append(copy.deepcopy(user_minion_list))
-	enemy_minion_status_keep.append(copy.deepcopy(enemy_minion_list))
+	user_minion_status_keep.append(pickle.dumps(user_minion_list))
+	enemy_minion_status_keep.append(pickle.dumps(enemy_minion_list))
 def load_status():
 	global user_minion_list
 	global enemy_minion_list
-	user_minion_list=copy.deepcopy(user_minion_status_keep[-1])
-	enemy_minion_list=copy.deepcopy(enemy_minion_status_keep[-1])
+	user_minion_list=pickle.loads(user_minion_status_keep[-1])
+	enemy_minion_list=pickle.loads(enemy_minion_status_keep[-1])
 def pop_status():
 	user_minion_status_keep.pop()
 	enemy_minion_status_keep.pop()
@@ -219,7 +220,7 @@ def deal(n,tragedy):
 	poppy.pop()
 	return	
 if __name__ == "__main__":
-	tragedy=1
+	tragedy=2
 	#adjust this line to get your ideal result
 	#when tragedy==1 all minions ,including yours, would be destroyed
 	#when tragedy==2 only enemy minions would be destoryed.
